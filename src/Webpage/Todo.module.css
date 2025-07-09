@@ -327,7 +327,8 @@ input[type='text']:focus{
 
     .Tododinput{
         margin-left: 0px;
-        padding: 10px;
+        padding: 10px
+        display:none;
     }
 
     .Dropdown{
