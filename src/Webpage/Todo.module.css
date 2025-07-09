@@ -1,0 +1,369 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    padding: 50px 0px;
+    background-color: var( --background-color) ;
+    transition: 1s ease;
+}
+
+.todoList{
+    /* width: 100%; */
+    height: 100%;
+    text-align: center;
+}
+
+.todoList h1{
+    font-size: 40px;
+    color: var(--primary-text-color);
+}
+
+form{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+input[type='search']{
+    width: 350px;
+    background-color: transparent;
+    border: 1px solid var(--secondary-text-color);
+    border-radius: 5px;
+    outline: none;
+    caret-color: var(--secondary-text-color);
+    color: var(--secondary-text-color);
+    font-size: 18px;
+    font-weight: 600;
+    padding: 10px 20px 10px 45px;
+    box-sizing: border-box;  
+}
+
+.Search img{
+    position: absolute;
+    padding: 13px;
+}
+
+input[type='search']::placeholder{
+    font-size: 19px;
+    font-weight: 500;
+    color: var(--other);
+}
+
+input[type='search']:focus{
+    box-shadow: 0px 0px 8px var(--secondary-text-color);
+}
+
+.Span{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.Dropdown{
+    width: 170px;
+    background-color: #6C63FF !important;
+    border: none !important;
+    text-align: left !important;
+    padding: 12px !important;
+}
+
+.Dropdown:focus{
+    box-shadow: 0px 0px 8px #6C63FF;
+}
+
+.Dropdownmenu{
+    width: 100%;
+    box-shadow: 0px 0px 10px #6C63FF;
+}
+
+form img{
+    height: 50px;
+    cursor: pointer;
+}
+
+.onlyMe{
+    display: none;
+}
+
+
+li{
+    width: 100%;
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 10px;
+}
+
+.Text{
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+    color: var(--primary-text-color);
+    margin-left: -35px;
+}
+
+input[type='checkbox']{
+    width: 40px;
+    accent-color: #6C63FF !important;
+}
+
+.Text label{
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.Border{
+    border-bottom: 1px solid #6C63FF;
+    margin-top: 20px;
+    margin-left: -10px;
+    width: 560px;
+}
+
+.ControlBtn img{
+    cursor: pointer;
+    margin-left: 10px;
+    transition: 5s ease;
+}
+
+.Add{
+    display: flex;
+    justify-content: center;
+    background-color: #6C63FF;
+    width: 50px;
+    padding: 10px;
+    border-radius: 50px;
+    position: absolute;
+    bottom: 30px;
+    right: 380px;
+    cursor: pointer;
+}
+
+.Tododinput{
+    border: 1px solid white;
+    padding: 10px 30px;
+    border-radius: 20px;
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 85px;
+    position: absolute;
+    top: 50px;
+    backdrop-filter: blur(1000px);
+    transition: 1s ease;
+    box-shadow: 0px 0px 20px #6C63FF;
+}
+
+.Tododinput h2{
+   color: var(--primary-text-color);
+   font-size: 23px;
+}
+
+.Tododinput input{
+    margin-top: 10px;
+    width: 350px;
+    background-color: transparent;
+    border: 1px solid var(--secondary-text-color);
+    border-radius: 5px;
+    padding: 8px;
+    outline: none;
+    caret-color: var(--secondary-text-color);
+    color: var(--secondary-text-color);
+    font-size: 17px;
+    font-weight: 600;
+}
+
+.Tododinput input::placeholder{
+    font-size: 19px;
+    font-weight: 500;
+    
+}
+
+input[type='text']:focus{
+    box-shadow: 0px 0px 8px var(--secondary-text-color);
+}
+
+.Btn{
+    margin-top: 70px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.Btn button{
+   padding: 5px 20px;
+   background-color: transparent;
+   border: 1px solid #6C63FF;
+   border-radius: 5px;
+   color: #6C63FF;
+   font-weight: 700;
+   font-size: 18px;
+   transition: 1s ease;
+}
+
+.Btn button:nth-child(1):hover{
+    background-color: #6C63FF;
+    color: white;
+}
+
+.Btn button:nth-child(2){
+    background-color: #6C63FF;
+    color: white;
+}
+
+.Btn button:nth-child(2):hover{
+    opacity: 0.8;
+}
+
+:root{
+    --background-color: #252525 !important;
+    --primary-text-color:white !important;
+    --secondary-text-color:white !important;
+    --other:gray !important;
+}
+
+[data-theme="light"]{
+    --background-color: #F7F7F7 !important;
+    --primary-text-color:black !important;
+    --secondary-text-color:#6C63FF !important;
+    --other:#6C63FF !important;
+}
+
+
+@media (max-width:650px){
+    form{
+        flex-direction: column;
+    }
+
+    input[type='search']{
+        flex-wrap: wrap;
+        max-width: 650px;
+        width: 500px;
+    }
+
+    .Dropdown{
+        width: 435px;
+    }
+
+    .onlyMe{
+        display: flex;
+        gap:10px;
+        align-items: center;
+        justify-content: center;
+        background-color: #6C63FF;
+        border-radius: 5px;
+        width: 500px;
+    }
+
+    .onlyMe p{
+        margin-top: 14px;
+        font-size:18px;
+        font-weight: 700;
+        color: white;
+    }
+
+    .onlyMe img{
+        width: 20px;
+    }
+
+    .Add{
+       display: none;
+    }
+
+    .Tododinput{
+        margin-left: 40px;
+    }
+
+    li{
+        margin-left: -18px;
+    }
+
+    .Text{
+        margin-left: 0;
+    }
+
+    .Border{
+        width: 470px;
+        margin-left: -18px;
+    }
+}
+
+@media (max-width:550px){
+    input[type='search']{
+        /* max-width: 650px; */
+        width: 450px;
+    }
+
+    .Tododinput{
+        margin-left: 20px;
+    }
+
+    .Dropdown{
+        width: 387px;
+    }
+
+    .onlyMe{
+        width:450px;
+    }
+
+     .Border{
+        width: 420px;
+        margin-left: -15px;
+    }
+}
+
+@media (max-width:475px){
+    input[type='search']{
+        width: 380px;
+    }
+
+    .Tododinput{
+        margin-left: 03px;
+        padding: 10px;
+    }
+
+    .Dropdown{
+        width: 315px;
+    }
+
+    .onlyMe{
+        width: 380px;
+    }
+
+    .Border{
+        width: 350px;
+        margin-left: -15px;
+    }
+}
+
+@media (max-width:475px){
+    input[type='search']{
+        width: 330px;
+    }
+
+    .Dropdown{
+        width: 265px;
+    }
+
+    .Tododinput input{
+        width: 310px;
+    }
+
+    .onlyMe{
+        width: 330px;
+    }
+
+    .Border{
+        width: 300px;
+        margin-left: -15px;
+    }
+}
+
